@@ -3,8 +3,10 @@
 
 ### ✏️ Homework
 
-- **14.11.2022:**  
+- **Monday, 14.11.2022:**  
   Split up your existing "Travel Blog" application into simple React components. You shouldn't care about styling or functionality right now. Just think about the structure of your files, and where it makes sense to create new components.
+- **Wednesday, 17.11.2022:**
+  Either take your own code from the "travel blog" or alternatively take the code from `code/lesson02/component-template/index.html` and move it into a new React app. Then split it up into sensible components (more than 3). Finally, add some `props` to your components so we can change the dynamic parts of your page (something like a counter value, or a travel location spot) from the outside.
 
 ### 📄 Docs
 
