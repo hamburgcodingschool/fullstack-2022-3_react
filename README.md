@@ -5,8 +5,11 @@
 
 - **Monday, 14.11.2022:**  
   Split up your existing "Travel Blog" application into simple React components. You shouldn't care about styling or functionality right now. Just think about the structure of your files, and where it makes sense to create new components.
-- **Wednesday, 17.11.2022:**  
+- **Wednesday, 16.11.2022:**  
   Either take your own code from the "travel blog" or alternatively take the code from `code/lesson02/component-template/index.html` and move it into a new React app. Then split it up into sensible components (more than 3). Finally, add some `props` to your components so we can change the dynamic parts of your page (something like a counter value, or a travel location spot) from the outside.
+- **Friday, 18.11.2022:**  
+  Use your code from the previous homework and enrich it with all the stuff that we learned, where you see fit. Explicitly this means you should be using **Object destructuring in Component props**, **Conditional rendering with `&&`, `||` or `?`** and **Attaching simple `onClick` handlers**. Please also try to introduce a first **state variable** using the `useState()` hook and pass it on to some components.
+
 
 ### 📄 Docs
 
