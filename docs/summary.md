@@ -31,11 +31,35 @@ function MyComponent() {
 - If you want to have a single top-level element without any semantic meaning, you can use a **Fragment**: `<>` and `</>`
 
 ## Lesson 02 (16.11.2022):
-- React components can have properties (Props), they work like HTML attributes:
+- React components can define properties (**Props**):
 ```jsx
 function Greeter(props) {
   return (
-    <h1>Hello, {props.name}</h1>
+    <h1>Hello, {props.name} from {props.location}!</h1>
   );
 }
+```
+- Passing something to these properties looks like using regular HTML attributes (like `src`, `href`, etc.)
+```jsx
+<Greeter name="Maria" location="Berlin" />
+```
+- There is a special prop called `children`, which automatically contains everything that's been nested inside of a React component.
+```jsx
+function Greeter(props) {
+  return (
+    <div>
+      <h1>Hello, {props.name} from {props.location}!</h1>
+      <div>{props.children}</div>
+    </div>
+  );
+}
+```
+- Using/passing children to a component looks like this:
+```jsx
+<Greeter name="Maria" location="Berlin">
+  <>
+    <h2>More content goes here</h2>
+    <p>All this content will be passed to the component.</p>
+  </>
+</Greeter>
 ```
