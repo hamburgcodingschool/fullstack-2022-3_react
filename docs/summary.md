@@ -29,3 +29,13 @@ function MyComponent() {
 }
 ```
 - If you want to have a single top-level element without any semantic meaning, you can use a **Fragment**: `<>` and `</>`
+
+## Lesson 02 (16.11.2022):
+- React components can have properties (Props), they work like HTML attributes:
+```jsx
+function Greeter(props) {
+  return (
+    <h1>Hello, {props.name}</h1>
+  );
+}
+```
