@@ -13,11 +13,11 @@
 
 ### 📄 Docs
 
-- [Lesson Summary](https://...)
+- [Lesson Summary](docs/summary.md)
 
-- [Handout](https://...)
+- [Handout](docs/handout_react.pdf)
 
-- [Outline](https://...)
+- [Outline](docs/outline_react.pdf)
 
 
 ### 🤔 Questions?
