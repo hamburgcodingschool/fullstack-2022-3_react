@@ -108,3 +108,20 @@ function Greeter({myBooleanCondition, myProperty}) {
 ```jsx
 const [counterValue, setCounterValue] = useState(123);
 ```
+
+## Lesson 03 (22.11.2022):
+- "Where" you put your state in your React application is very important (and can be tricky): It should be as "low" as possible (in your component tree). Don't put ALL your state into the top-level component.
+- To use forms and inputs, we need to "wire them up" to the React world. We need to turn them into "**controlled components**" (controlled means, that React is controlling this input). This happens by moving the form/input value into state and then forwarding **two** props to the component: The actual value itself and a handler that updates the state variable, when we type/click into our input.
+```jsx
+function ControlledInput() {
+  const [myStateValue, setMyStateValue] = useState("");
+
+  function onTypeHandler(event) {
+    setMyStateValue(event.target.value);
+  }
+
+  return(
+    <input value={myStateValue} onChange={onTypeHandler} />
+  )
+}
+```
