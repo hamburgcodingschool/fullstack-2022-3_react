@@ -109,7 +109,7 @@ function Greeter({myBooleanCondition, myProperty}) {
 const [counterValue, setCounterValue] = useState(123);
 ```
 
-## Lesson 03 (22.11.2022):
+## Lesson 04 (21.11.2022):
 - "Where" you put your state in your React application is very important (and can be tricky): It should be as "low" as possible (in your component tree). Don't put ALL your state into the top-level component.
 - To use forms and inputs, we need to "wire them up" to the React world. We need to turn them into "**controlled components**" (controlled means, that React is controlling this input). This happens by moving the form/input value into state and then forwarding **two** props to the component: The actual value itself and a handler that updates the state variable, when we type/click into our input.
 ```jsx
@@ -124,4 +124,26 @@ function ControlledInput() {
     <input value={myStateValue} onChange={onTypeHandler} />
   )
 }
+```
+
+## Lesson 05 (23.11.2022):
+- Passing/forwarding props through many levels of components without modifying them is called `Prop Drilling`. If this happens a lot in your app, it might be a sign to use some **global state** – This is state, that you can access anywhere in your component tree, without using props to access it.
+- The most popular **global state management** system is [Redux](https://redux.js.org/). However there are more lightweight alternatives for small and educational projects. For small uses cases, we can use React's [very own Context API](https://reactjs.org/docs/hooks-reference.html#usecontext) (via the `useContext()` hook). Another nice and small candidate for global state management is [Zustand](https://github.com/pmndrs/zustand).
+- To interact with "stuff that doesn't live in React" (we call all of this stuff **Side Effects** like APIs, non-React JS libraries and frameworks, the global `document` or `window` object, timers, etc.), we can use the [`useEffect()` hook](https://reactjs.org/docs/hooks-effect.html).
+- `useEffect()` takes a function (which contains side effects) as its first parameter. The second parameter is an array called `dependencies`, it contains an array of values. Whenever one of these changes, the function in the first parameter will run again.
+```jsx
+function MyComponent() {
+  const [fetchedData, setFetchedData] = useState("");
+
+  useEffect(() => {
+    fetch("https://myApi.com/myEndpoint/234")
+      .then((result) => result.json())
+      .then((data) => {
+        setFetchedData(data);
+      });
+  });
+
+  return <div>{fetchedData}</div>;
+}
+
 ```
