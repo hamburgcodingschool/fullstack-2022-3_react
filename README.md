@@ -11,8 +11,10 @@
   Use your code from the previous homework and enrich it with all the stuff that we learned, where you see fit. Explicitly this means you should be using **Object destructuring in Component props**, **Conditional rendering with `&&`, `||` or `?`** and **Attaching simple `onClick` handlers**. Please also try to introduce a first **state variable** using the `useState()` hook and pass it on to some components.
 - **Monday, 21.11.2022:**  
   Create a new React app that renders little **Profile cards** for users. Add a form to your app, that has inputs for first name, last name, age and location. When a user fills the form and clicks on a button (or presses the enter key), the form should be emptied and a "Profile card" should be created and appear somewhere on the page.
-- **Monday, 23.11.2022:**  
+- **Wednesday, 23.11.2022:**  
   Modify the last app/component with the profile cards, to show dynamic data that you got from an external API (e.g. PokeAPI or any other API). Try to show more than one item, to get some practice with `.map()`.
+- **Friday, 25.11.2022:**  
+  Modify the last app/component with the profile cards to use a `router` library (e.g. `router` or `react-router`). Create a route that renders a dynamic profile card depending on a dynamic route parameter (e.g. a Pokemon ID or name or weather location). So, when you open your app at `localhost:3000/pokemon/26` or `localhost:3000/weather/london` you should see the appropriate card/information.
 
 
 ### 📄 Docs
