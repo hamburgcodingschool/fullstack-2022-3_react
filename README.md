@@ -15,6 +15,8 @@
   Modify the last app/component with the profile cards, to show dynamic data that you got from an external API (e.g. PokeAPI or any other API). Try to show more than one item, to get some practice with `.map()`.
 - **Friday, 25.11.2022:**  
   Modify the last app/component with the profile cards to use a `router` library (e.g. `router` or `react-router`). Create a route that renders a dynamic profile card depending on a dynamic route parameter (e.g. a Pokemon ID or name or weather location). So, when you open your app at `localhost:3000/pokemon/26` or `localhost:3000/weather/london` you should see the appropriate card/information.
+- **Monday, 28.11.2022:**  
+  Modify the last app/component with the profile cards to use either **CSS Modules** or **Styled Components** to style your profile card (or even more parts of the App).
 
 
 ### 📄 Docs
