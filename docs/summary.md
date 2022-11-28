@@ -147,3 +147,36 @@ function MyComponent() {
 }
 
 ```
+
+## Lesson 06 (25.11.2022):
+- React apps are **SPA (Single Page Applications)** – this refers to the **single request** they make, to fetch the JS source code from a server. This single code bundle will contain everything they need (including React) to function (obviously there will still be requests to other APIs, your backend, images, fonts, etc. – but the App logic itself is contained within one single bundle of code).
+- Inside of **SPA** we should not use regular links (`<a href="xyz"/>`) for navigation – because clicking on this link will always trigger a new request to the server (which is unnecessary, because our App has already been loaded). Using default links will also reset our state, so it will probably break app behavior.
+- Instead of using regular links, we use **client-side navigation** – which means, we will just use browser APIs like the [History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API) that our browser offers, to modify the Location bar and make it "look like we are clicking on links" – even though we're actually just updating the Location bar and conditionally render/hide specific components.
+- To make this easy for us, we can use a **Router**. This is a library that gives us at least two things to implement navigation: A `<Link>` component and a `<Route>` component. The most popular router is [react-router](https://reactrouter.com/en/main) but since version 5 it has become a lot weirder to use. Its old version 4 is sill widely used and it has a very nice API. There is also [wouter](https://github.com/molefrog/wouter), which is very similar to react-router v4.
+- A Link component behaves mostly like the `<a>` HTML tag, but clicking on it, will not trigger a new request from the browser.
+- A Route component is basically a big `if ()` condition, that is true, when the current URL in the browser matches a given `path`.
+```jsx
+import { Link, Route } from "wouter";
+
+function App() {
+  return (
+    <div>
+      <Link href="/users/1">Profile</Link>
+
+      <Route path="/about">About Us</Route>
+      <Route path="/users/:name">
+        {(params) => <div>Hello, {params.name}!</div>}
+      </Route>
+      <Route path="/inbox" component={InboxPage} />
+    </div>
+  );
+}
+
+```
+- Routers will always offer a way to define dynamic route parameters, which you can use to fetch/get specific pieces of data.
+
+```
+<Route path="/users/:name">
+  {(params) => <div>Hello, {params.name}!</div>}
+</Route>
+```

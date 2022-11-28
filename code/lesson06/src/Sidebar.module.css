@@ -1,0 +1,6 @@
+.container {
+  padding: 12px;
+  background-color: green;
+  width: 100%;
+  flex: 2;
+}
