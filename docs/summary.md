@@ -175,7 +175,7 @@ function App() {
 ```
 - Routers will always offer a way to define dynamic route parameters, which you can use to fetch/get specific pieces of data.
 
-```
+```jsx
 <Route path="/users/:name">
   {(params) => <div>Hello, {params.name}!</div>}
 </Route>
