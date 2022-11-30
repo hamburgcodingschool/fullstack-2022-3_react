@@ -159,7 +159,7 @@ For instance: The image `barcelona.jpg` saved under `public/images` can be linke
 - You get two consultation classes:
   - xxx
 - The consultation classes take place in our online classroom at NewRow.
-- **Deadline: xxx**
+- **Deadline: November 14th 2022**
 
 
 ## Submission
