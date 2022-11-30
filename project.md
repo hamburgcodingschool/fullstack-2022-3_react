@@ -157,9 +157,10 @@ For instance: The image `barcelona.jpg` saved under `public/images` can be linke
 - You can ask the trainer for help anytime.
 - For communication, use the Slack channel.
 - You get two consultation classes:
-  - xxx
-- The consultation classes take place in our online classroom at NewRow.
-- **Deadline: 18:00h on November 14th 2022**
+  - December 7th at 18:00h - 20:00h (Location TBD)
+  - December 12th at 18:00h - 20:00h (Location TBD)
+- The consultation classes take place either .
+- **Deadline: 18:00h on December 14th 2022**
 
 
 ## Submission
