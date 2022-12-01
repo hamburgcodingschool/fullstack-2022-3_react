@@ -29,7 +29,7 @@ The dashboard shows an overview of all the blog posts and a Map.
 
 ### 3. World Map with a Maps API
 
-- Research for a method to integrate either the Google Maps API or the Mapbox API into a Component to display a world map.
+- Research for a method to integrate either the [Google Maps API](https://developers.google.com/maps/documentation/javascript/overview) or the [Mapbox API](https://docs.mapbox.com/mapbox-gl-js/guides/) into a component to display a world map. (You can either chose to use the "vanilla js" SDKs/libraries or research an existing React wrapper for any of these mapping services)
 - For each blog post, put a marker on the map at the location of the post.
 - Initially the map gets centered by the newest blog post entry.
 
@@ -47,6 +47,7 @@ The dashboard shows an overview of all the blog posts and a Map.
 
 
 ### 4. Blog Posts
+All your blog post data should be stored inside of a .json file within your project folder, which you can then `import` into your React application. This can also optionally later be replace with an actual backend API.
 
 #### Blog Post Previews
 
@@ -103,21 +104,15 @@ You can choose any of these optional bonus tasks, in any order.
 
 ### Bonus 2: Get Blog Posts from Backend
 
-- Create a seperate Node.JS application to handle the Backend
-- Serve your Blog Posts through a REST Api with JSON
+- Create a seperate Node.js application to handle the backend part or use an existing, free backend service (something like [Supabase](https://supabase.com/) or [Firebase](https://firebase.google.com/))
+- Serve your blog Posts through a REST Api with JSON
 
 ### Bonus 3: New Blog Post
-
 - With the path `/new` a blog post form is shown, where a new blog post can be added.
-
 - On submit, the new blog post is sent and stored to the backend.
-
 - The form is cleared after adding a new blog post and the user gets directed to the Dashboard, again.  
-
 - For the images: Save the image in your project manually in the public folder and use it with a relative path as string.  
-
-For instance: The image `barcelona.jpg` saved under `public/images` can be linked in the templates with `"/images/barcelona.jpg"`.
-  
+  For instance: The image `barcelona.jpg` saved under `public/images` can be linked in the templates with `"/images/barcelona.jpg"`.
 - Only a signed-in user can add a new blog posts.
 
 ![New Blog Post](/img/new-blog-post.jpg)
@@ -142,7 +137,6 @@ For instance: The image `barcelona.jpg` saved under `public/images` can be linke
 
 
 ### Bonus 6: Provide a user profile page
-
 - Add a link in the menu bar, where the signed-in user can edit their profile.
 - At the profile page, the signed-in user can upload a profile image and save their name.
 - Use this information, if available,
@@ -150,7 +144,6 @@ For instance: The image `barcelona.jpg` saved under `public/images` can be linke
   - in the menu to show logged in users name and image.
 
 ## Modalities
-
 - You can work alone or in a team of two.
 - You are allowed (and even encouraged) to ask your classmates for help or help them.
 - Use all the documentation and online tutorials as you like.
